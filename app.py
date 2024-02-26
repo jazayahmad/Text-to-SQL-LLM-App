@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import streamlit as st
+from annotated_text import annotated_text
 import os
 import sqlite3
 import google.generativeai as genai
@@ -48,7 +49,7 @@ submit = st.button("Ask the question")
 
 if submit:
     response = get_gemini_response(input, prompt=prompt)
-    print(response)
+    annotated_text(" ",(response, "Query Generated", "#afa"),)
     response=read_sql_query(response,"student.db")
     st.subheader("Response: ")
     for row in response:
