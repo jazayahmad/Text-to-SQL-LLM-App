@@ -1,7 +1,7 @@
 ## Project Overview: Text To SQL LLM App
 The code showcases the creation of a text to SQL LLM application using Google Gemini Pro, which is capable of converting natural language text into SQL queries and retrieving data from an SQL database.
 
-### How it works
+#### How it works
 ![Alt text](textToLlm.png)
 
 #### Technical Details
